@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>my meme library</title>
+</head>
+<style>
+	body {background-color: black;}
+</style>
+
+<body>
+	<parent-child></parent-child>
+	<script src="./tags/parent-child.tag" type="riot/tag"></script>
+	<script src="./tags/child.tag" type="riot/tag"></script>
+	<script src="https://cdn.jsdelivr.net/riot/3.1.0/riot+compiler.js"></script>
+
+	<script>
+		riot.mount('*');
+	</script>
+</body>
+
+</html>

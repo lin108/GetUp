@@ -16,6 +16,14 @@
         <button onclick={ GetUp }>Get Up!</button>
   </div>
 
+
+
+
+
+
+
+
+
   <style>
     :scope {
       display: block;
@@ -28,6 +36,15 @@
       border: 1px solid #CCC;
       border-radius: 6px;
       margin: 2px;
+      padding: 10px;
+    }
+    .meme{
+      background-color: black;
+
+      display: inline-block;
+      border: 1px solid #CCC;
+      border-radius: 6px;
+      margin-top: 50px;
       padding: 10px;
     }
     img{
@@ -56,6 +73,13 @@
 
 
 
+  <div class="meme">
+    <button type="button" onclick={ openMeme }>Open Meme Library</button>
+  </div>
+
+
+
+
 
   <script>
   this.userLogin = function(e){
@@ -67,6 +91,11 @@
             this.userInfo = false;
 
           }
+  this.openMeme = function(){
+          window.location.assign('meme.html');
+
+                  }
+
 
 
 
@@ -105,7 +134,7 @@
 
     incUp() {
       console.log(this.up);
-      this.up = this.up + 10 > 100 ? 100 : this.up + 3;
+      this.up = this.up + 10 > 100 ? 100 : this.up + 2;
     }
 
     checkStatus() {
