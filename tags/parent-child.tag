@@ -69,6 +69,8 @@
 			//since in this case, event is triggered by child, parent data won't be updated until
 			//we call it to update manually.
 			that.update();
+      var key = this.id;
+      memeRef.child(key).remove();
 		};
 
 		// this.addMeme = function(event) {
@@ -140,15 +142,12 @@
 			};
       this.myMemes.push(meme);
       memeRef.push(meme);
-
       memeRef.child(key).set(meme);
 
       //clean up default input values
       this.refs.urlEl.value = "";
       this.refs.captionEl.value = "";
       this.refs.funnyEl.value = "";
-
-
 		//	memeRef.push(meme);
 		}
 
